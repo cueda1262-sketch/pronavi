@@ -78,7 +78,6 @@ list-style: none;
 a {
   color: #000;
   text-decoration: none;
-  /* display: inline-block;    */
 }
 
 img {
@@ -178,6 +177,7 @@ h1 {
 .cta_txt {
   /* flex: 1; */
   margin: 0 auto;
+  text-align: center;
 }
 
 .cta_lead{
@@ -186,9 +186,13 @@ h1 {
   padding-block: 32px 16px;
 }
 
+.cta_sub_txt{
+  text-align: left;
+}
+
 .btn{
   text-align: center;
-  display: inline-block;
+  margin-inline: auto;
 }
 
 .cta_btn{
@@ -204,6 +208,7 @@ h1 {
   max-width: 380px;
   margin-top: 20px;
   margin-bottom: 32px;
+  margin-inline: auto;
 }
 
 .cta_btn a{
@@ -484,17 +489,29 @@ header ul li a:hover {
 }
 
 .achievements  {
- /* max-width: 1440px;
- height: 476px; */
  padding:32 190 34 190 ;
+ position: relative;
 }
 
 .achievements .photo{
- /* width:1050px ;
- height: 232px;  */
- /* padding-left: 400px;  */
  text-align: center;
  margin-bottom: 40px;
+}
+
+.decoration img{
+  width: 350px;
+  height: auto;
+  position: absolute;
+  top: 250px;
+  z-index: 10;
+}
+
+.deco-left{
+  left: -20px;
+}
+
+.deco-right{
+  right: 0;
 }
 
 /* ///// 受講生のリアルなストーリー ///// */
@@ -622,11 +639,10 @@ from {
 }
 
 .bg{
-  background-image: url(/img/bg_grid.jpg);
+  background-image: url(../img/bg_grid.jpg);
   background-size: contain;
   background-repeat: repeat;
   position: relative;
-  z-index: -10;
 }
 
 /* ///// ABOUT ///// */
@@ -764,12 +780,11 @@ forwards：アニメーション終了時の状態をそのまま維持
 
 .btn-detail {
   margin-bottom: 120px;
-  z-index: 20;
-  
+  z-index: 40;
 }
 
-.btn-item{
-  display: flex;
+.btn-detail a{
+  display: block;
   background-color: #FFDF61;
   box-shadow: 4px 4px #A2872F;
   padding: 10px 40px;
@@ -779,17 +794,19 @@ forwards：アニメーション終了時の状態をそのまま維持
   border-radius: 32px;
   max-width: 380px;
   margin-top: 20px;
+  color: #333; 
 }
 
-.btn-detail a{
+a.btn-detail::after {
+  content: "";
   display: inline-block;
-  color: #333;
-}
-
-.btn-item img{
   width: 45px;
+  height: auto;
+  margin: -3px 0 0 5px;
+  background: url(/img/btn_icon.png);
+  background-size: contain;
+  vertical-align: middle;
 }
-
 
 
 /* ///// FLOW_受講の流れ ///// */
@@ -1373,7 +1390,6 @@ small{
   position: absolute;
   top: 60px;
   left: 12%;
-  /* transform: translateX(-50%); */
   width: 160px; /* 旗画像の実サイズ */
   height: 180px; /* 旗画像の実サイズに合わせ調整 */
   display: flex;
@@ -1508,7 +1524,6 @@ small{
   display: grid;
   gap: 45px;
   grid-template-columns: 1fr 1fr ;
-  /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
   margin-inline: auto;
   margin-block: 36px;
 }
@@ -1644,23 +1659,12 @@ small{
 
 
 .video-item {
-  /* position: relative; */
-  /* width: 100%; */
-
-  max-width: 800px; /* 任意：動画幅の上限 */
-  margin: 0 auto; /* 中央寄せ */
-  /* aspect-ratio: 16 / 9; 動画比率に合わせて指定 */
-  /* overflow: hidden; */
-  /* text-align: center; */
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .video-item video {
-  /* position: absolute; */
   width: 100%;
-  /* height: 100%; */
-  /* top: 50%;
-  left: 50%;
-  transform: translate(-50% -50%); */
   object-fit: cover; /* 黒帯防止 */
   display: inline-block;
 }
@@ -1699,10 +1703,10 @@ small{
     display: flex;
     flex-direction: column;
     left: 0;
-    padding: 2rem; /* カスタマイズしてください */
+    padding: 2rem;
     position: absolute;
     transform: translateX(-100%);
-    transition: 0.5s; /* カスタマイズしてください */
+    transition: 0.5s; 
     top: 100%;
     width: 100%;
     z-index: 20;
@@ -1813,8 +1817,5 @@ small{
   /*---------------------------------------
   header
   ---------------------------------------*/
-  .header-inner {
-  /* max-width: 767px; */
-  }
 
 }
