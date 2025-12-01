@@ -448,7 +448,7 @@ header ul li a:hover {
 /* ///// PROBLEM ///// */
 
 .box{
-  max-width: 1440px;
+  /* max-width: 1440px; */
   background-color: #e6e6e6;
   position: relative;
 }
@@ -469,6 +469,7 @@ header ul li a:hover {
   max-width: 1440px;
   height: 680px;
   position: relative;
+  margin: 0 auto;
   /* フェードインのため、最初は非表示 */
   overflow: hidden;
 }
@@ -1184,6 +1185,7 @@ tbody tr:last-child>*:nth-child(2){
   display: flex;
   justify-content: space-between;
   gap: 80px;
+  overflow-x: auto;
 }
 
 .flow_counseling_item{
