@@ -504,29 +504,39 @@ header ul li a:hover {
 .img2{
   position: absolute;
   top: 0;
-  left: 200px;
-  width: 309px;
+  /* left: 200px; */
+  left: clamp(40px, calc(40px + (160 * ((100vw - 768px) / 512))), 200px);
+  /* width: 309px; */
+  width: clamp(200px, calc(200px + (109 * ((100vw - 630px) / 130))), 309px);
 }
 
 .img3{
   position: absolute;
-  top: 20px;
-  right: 180px;
-  width: 309px;
+  top: 40px;
+  /* top: clamp(70px, calc(70px + (50 * ((100vw - 768px) / 512))), 20px); */
+  /* right: 180px; */
+  right: clamp(50px, calc(50px + (130 * ((100vw - 768px) / 512))), 180px);
+  /* width: 309px; */
+  width: clamp(200px, calc(200px + (109 * ((100vw - 630px) / 130))), 309px);
   }
 
 .img4{
   position: absolute;
-  top: 180px;
-  left: 110px;
-  width: 309px;
+  top: 160px;
+  /* top: clamp(70px, calc(70px + (50 * ((100vw - 768px) / 512))), 200px); */
+  /* left: 110px; */
+  left: clamp(40px, calc(40px + (70 * ((100vw - 768px) / 512))), 110px);
+  /* width: 309px; */
+  width: clamp(200px, calc(200px + (109 * ((100vw - 650px) / 150))), 309px);
 }
 
 .img5{
   position: absolute;
   top: 200px;
-  right: 110px;
-  width: 388px;
+  /* right: 110px; */
+  right: clamp(50px, calc(50px + (60 * ((100vw - 768px) / 512))), 110px);
+  /* width: 388px; */
+  width: clamp(279px, calc(279px + (188 * ((100vw - 650px) / 150))), 388px);
 }
 
 /* ///// お悩み解決します・実績 ///// */
